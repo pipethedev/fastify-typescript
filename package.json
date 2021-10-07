@@ -1,0 +1,42 @@
+{
+  "name": "soft-fastify",
+  "version": "1.0.0",
+  "description": "A boilerplate",
+  "main": "dist/main.js",
+  "repository": "https://github.com/Fn-studyo/fastify-typescript",
+  "author": "Muritala David",
+  "license": "ISC",
+  "private": false,
+  "scripts": {
+    "clean": "rimraf dist",
+    "start:dev": "NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec ts-node src/server.ts",
+    "start:production": "NODE_ENV=production node dist/server.js",
+    "start:staging": "NODE_ENV=staging node dist/server.js",
+    "build": "tsc --listEmittedFiles "
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.2.1",
+    "@types/node": "^16.10.3",
+    "fastify": "^3.22.0",
+    "fastify-auth": "^1.1.0",
+    "fastify-autoload": "^3.9.0",
+    "fastify-cors": "^6.0.2",
+    "fastify-file-upload": "^3.0.0",
+    "fastify-formbody": "^5.1.0",
+    "fastify-helmet": "^5.3.2",
+    "fastify-swagger": "^4.12.4",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.2.1",
+    "typedi": "^0.10.0",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "prisma": "^3.2.1"
+  }
+}

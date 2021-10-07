@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@*": ["src/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@dtos/*": ["src/dtos/*"],
+      "@exceptions/*": ["src/exceptions/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@routes/*": ["routes/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"]
+      // add more paths heres
+    }
+  }
+}
