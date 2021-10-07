@@ -1,7 +1,6 @@
 {
-  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
-    "module": "CommonJS",
+    "module": "commonjs",
     "lib": ["ESNext"],
     "declaration": true,
     "noImplicitAny": true,
@@ -12,11 +11,23 @@
     "target": "ESNext",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "importHelpers": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@*": ["src/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@dtos/*": ["src/dtos/*"],
+      "@exceptions/*": ["src/exceptions/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@routes/*": ["src/routes/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"]
+      // add more paths heres
+    },
   },
   "exclude": ["node_modules"]
 }

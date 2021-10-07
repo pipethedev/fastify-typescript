@@ -9,9 +9,9 @@
   "private": false,
   "scripts": {
     "clean": "rimraf dist",
-    "start:dev": "NODE_ENV=development nodemon --watch 'src/**/*.ts' --exec ts-node src/server.ts",
-    "start:production": "NODE_ENV=production node dist/server.js",
-    "start:staging": "NODE_ENV=staging node dist/server.js",
+    "start:dev": "nodemon --watch 'src/**/*.ts' --exec ts-node -r tsconfig-paths/register src/server.ts",
+    "start:production": "node -r tsconfig-paths/register  dist/server.js",
+    "start:staging": "node -r tsconfig-paths/register dist/server.js",
     "build": "tsc --listEmittedFiles "
   },
   "prisma": {
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.13",
+    "tsconfig-paths": "^3.11.0",
     "prisma": "^3.2.1"
   }
 }
