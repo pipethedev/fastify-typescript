@@ -7,7 +7,7 @@ class App {
   public app_domain: string = 'localhost';
   public app_port: number = 3000; //parseInt(`${process.env.APP_PORT}`, 10) ?? 8080
 
-  constructor(appInit: { plugins: any; routes: any }) {
+  constructor(appInit: { plugins: Array<any>; routes: Array<any> }) {
     this.app = fastify({ logger: true })
     this.app.register(require('fastify-formbody'))
     this.app.register(require('fastify-cors'))
@@ -30,6 +30,7 @@ class App {
       }
     })
   }
+
 
   public routes(routes: { forEach: (arg0: (routes: any) => void) => void }) {
     routes.forEach((route) => {
