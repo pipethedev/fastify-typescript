@@ -1,4 +1,5 @@
 import 'reflect-metadata';
+import prismaPlugin from './plugins/prisma'
 import fastify,{ FastifyInstance } from 'fastify';
 
 class App { 
@@ -12,6 +13,7 @@ class App {
     this.app.register(require('fastify-cors'))
     this.app.register(require('fastify-file-upload'))
     this.app.register(require('fastify-helmet'))
+    this.app.register(prismaPlugin)
     //Swagger Implementation
     this.swagger();
     // API routers
